@@ -1,0 +1,23 @@
+Node - javascript runtime environment - help to run the js outside of the webBrowser.
+
+Javascript on the server:
+
+req -> res
+database, Authentication, input Validation, Business Logic.
+client don't access to server side code - they can't manipulate
+
+Run Server - Create Server & Listen to incoming Requests.
+Business Logic - handle Requests, Validate Input, Connect to Database.
+Return Response - rendered Html, json
+
+The REPL:
+
+Read user input,
+Evaluate User Input,
+Print output,
+Loop - wait for new input.
+
+Execute - Used for real apps , predictable sequence of Steps
+REPL - Great playground, Execute code as you write it.
+
+Javascript - Basics - refreshed - ES6 Features
