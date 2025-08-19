@@ -21,3 +21,54 @@ Execute - Used for real apps , predictable sequence of Steps
 REPL - Great playground, Execute code as you write it.
 
 Javascript - Basics - refreshed - ES6 Features
+
+How the Web works:
+  1. user/clients hit URL - Domain Lookup - it'll request the server[ip address] - 
+  and code do the work - connect to database - response [ex. html page].
+  2. HTTP, HTTPs - Protocol - transferring data which is understood by Browser and server. s- http+data Encryption (during Transmission);
+
+
+creating a node server:
+core modules: 
+http - Launch a server, send request, 
+https - Launch a ssl server, 
+fs - file system , path, os
+ 
+
+Node js Program LifeCycle.
+
+node filename -> start Script -> parseCode, Register variable & Functions.
+
+Node Application - managed by Event Loop - keeps on running as long as events listeners registered.
+
+Process.exit - quit a server - program shutdown
+
+
+Understanding Requests:
+req.url, req.method, req.headers.
+
+Sending Response:
+res.setHeader() method set header.
+we can write the html with res.write method.
+
+Parsing Body Requests:
+Stream & Buffer-bus stop - always driving.
+
+stream - make it as chuck into the buffer - and parsed fully.
+using req.on("data", (chuck)=>{
+    store the chuck in the array.
+})
+
+using req.on("end",()=>{
+    parsing the collection of chuck using Buffer.concat(Chunks).toString();
+    and get the respective data.
+})
+
+Single Thread, Event Loop, Blocking Code.
+
+Event Loop - Handle Event callbacks - Timers, I/O Disc&Network operation~blocking ope - 
+poll ~ retrieve new events, check ~ execute setimmediate() callbacks
+close Callback - and process.exit ~ if no refs.
+
+Worker pool - do the Heavy Lifting - fs, os operation - different Threads.
+
